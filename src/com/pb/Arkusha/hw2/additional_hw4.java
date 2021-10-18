@@ -1,4 +1,5 @@
-///определение минимального модуля чисел
+///Создать программу, которая будет выводить на экран меньшее по модулю из трёх введённых пользователем вещественных чисел.
+// Для вычисления модуля используйте тернарную условную операцию.
 
 package com.pb.Arkusha.hw2;
 
@@ -11,16 +12,16 @@ public class additional_hw4 {
         Scanner scan = new Scanner(System.in);
         int operand1, operand2, operand3;
 
-        System.out.print("Введите первое число: ");
+        System.out.print("Введите 1е число: ");
         operand1 = scan.nextInt();
 
-        System.out.print("Введите второе число: ");
+        System.out.print("Введите 2е число: ");
         operand2 = scan.nextInt();
 
         System.out.print("Введите 3е число: ");
         operand3 = scan.nextInt();
         // char sign1 = sign.charAt(0);
-        System.out.println("Ваши числа : " + operand1 + "," + operand2+ "," + operand3);
+        System.out.println("Ваши числа: " + operand1 + "," + operand2+ "," + operand3);
 
         int operand11 = abs(operand1);
         int operand22 = abs(operand2);
@@ -28,6 +29,11 @@ public class additional_hw4 {
 
         System.out.println("Ваши числа после модуля: " + operand11 + "," + operand22+ "," + operand33);
 
+        int Answer11 = (operand11<=operand22 && operand11<=operand33) ? operand11 : ((operand22<=operand33 && operand22<=operand11) ? operand22 : operand33);
+
+        System.out.println(Answer11);
+
+        /* второй способ:
         if (operand11<=operand22 && operand11<=operand33)
         {
             System.out.println(operand11);
@@ -43,7 +49,7 @@ public class additional_hw4 {
         }
         else {
             System.out.println("Неправильное выражение");
-        }
+        }*/
 
     }
 }
