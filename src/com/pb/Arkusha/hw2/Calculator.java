@@ -15,22 +15,23 @@ public class Calculator {
 
        System.out.print("Введите желаемый математический знак: ");
         String sign = scan.next();
-        char sign1 = sign.charAt(0);
+       // char sign1 = sign.charAt(0);
         System.out.println("Ваше выражение - " + operand1 + sign + operand2);
 
-        switch (sign1) {
-            case '*':
+        switch (sign) {
+            case "*":
                 System.out.println("Итог умножения = " /*+ operand1 + sign + operand2 = */+ (operand1 * operand2));
                 break;
-            case '/':
+            case "/":
                 if (operand2 == 0) System.out.print("Делить на ноль нельзя, братюнь");
                 else {
                     System.out.println("Итог деления = " /*+ operand1 + sign + operand2 =*/ + ((float)operand1 / operand2));
                 }
                 break;
-            case '-':
+            case "-":
                 System.out.println("Итог отнимания = " /*+ operand1 + sign + operand2 = */+ (operand1 - operand2));
-            case '+':
+                break;
+            case "+":
                 System.out.println("Сумма = " /*+ operand1 + sign + operand2 = */+ (operand1 + operand2));
                 break;
             default:
