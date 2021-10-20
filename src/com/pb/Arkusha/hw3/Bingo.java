@@ -13,9 +13,9 @@ public class Bingo {
         final int MAX_ATTEMPT = 101; // Допустимое количество попыток (к-во от 0 до 100)
         int attempt = 0;           // Счетчик попыток.
         int cifra = random.nextInt(101);      // рандомное число от 0 до 100.
-        System.out.println(cifra);
+        System.out.println("!!!Подсказка для сравнения!!! Ваша цифра - " + cifra);
         //String str = Integer.toString(cifra);
-        Scanner in = new Scanner(System.in);
+        //Scanner in = new Scanner(System.in);
 
         while (attempt < MAX_ATTEMPT) {
             attempt++;
@@ -24,6 +24,7 @@ public class Bingo {
             //String str2 = Integer.toString(value);
 
             if (value < 0) {  ///что бы прервать игру
+                System.out.println("Закончилось количество попыток. xD");
                 break;
             }
             if (value > (cifra)) {
