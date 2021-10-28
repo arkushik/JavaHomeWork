@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Anagram {
     public static void main(String[] args) {
-        System.out.println("Введите свой текст");
-        String textt, textt2, t1, t2; //scan.nextLine();
+        //System.out.println("Введите свой текст");
+        String textt, textt2;
         textt = "Аз есмь строка, живу я, мерой остр.";
         System.out.println(textt);
         //anagram1(textt);
